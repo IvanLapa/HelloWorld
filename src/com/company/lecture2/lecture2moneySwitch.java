@@ -7,11 +7,12 @@ public class lecture2moneySwitch {
         System.out.println("Введите сумму денег в рублях:");
         Scanner sc = new Scanner(System.in);
         int sum_money = sc.nextInt();
-        int type_result1 = sum_money%10;
-        if (sum_money>10 && sum_money<19){
+        int result1 = sum_money%10;
+        int result2 = sum_money%100;
+        if (result2 >= 11 && result2<=19){
             System.out.println(sum_money + " " + "рублей");
         }   else {
-            switch (type_result1) {
+            switch (result1) {
                 case 0:
                     System.out.println(sum_money + " " + "рублей");
                     break;
@@ -43,7 +44,7 @@ public class lecture2moneySwitch {
                     System.out.println(sum_money + " " + "рублей");
                     break;
                 default:
-                    System.out.println(sum_money + " " + "ytn");
+                    System.out.println("Пожалуйста, введите корректную сумму");
             }
         }
     }

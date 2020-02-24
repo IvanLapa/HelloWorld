@@ -7,17 +7,17 @@ public class Lecture2money {
         System.out.println("Введите сумму денег в рублях:");
         Scanner sc = new Scanner(System.in);
         int sum_money = sc.nextInt();
-        int result = sum_money % 10;
-        int limit = 110;
-        if (sum_money==0 || result== 0) {
+        int result1 = sum_money % 10;
+        int result2 =  sum_money % 100;
+            if (sum_money==0 || result1== 0) {
             System.out.println(sum_money + " " + "рублей");
-        }   else if (sum_money == 1 || result == 1 && sum_money>11) {
-            System.out.println(sum_money + " " + "рубль");
-        }   else if (sum_money>=11 && sum_money<=20) {
+        }   else if (sum_money>=11 && sum_money<=19) {
             System.out.println(sum_money + " " + "рублей");
-        }   else if (sum_money>=2 && sum_money<=4 || result>=2 && result<=4) {
+        }   else if (result2 >= 11 && result2<=19) {
+            System.out.println(sum_money + " " + "рублей");
+        }   else if (result1>=2 && result1<=4) {
             System.out.println(sum_money + " " + "рубля");
-        }   else if (sum_money>=5 && sum_money<=9 || result>=5){
+        }   else if (result1>=5){
             System.out.println(sum_money + " " + "рублей");
         }   else {
             System.out.println("Пожалуйста, введите корректную сумму");
