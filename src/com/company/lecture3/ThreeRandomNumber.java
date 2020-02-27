@@ -2,7 +2,7 @@ package com.company.lecture3;
 
 import java.util.Random;
 
-public class lecture3ThreeRandomNumber {
+public class ThreeRandomNumber {
     public static void main (String[] args){
     int array[];
     array=new int[3];

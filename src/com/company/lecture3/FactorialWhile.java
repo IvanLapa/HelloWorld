@@ -1,9 +1,8 @@
 package com.company.lecture3;
 
-import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Lecture3FactorialFor {
+public class FactorialWhile {
     public static void main (String[] args){
         System.out.println("Введите число");
         Scanner sc;
@@ -11,9 +10,9 @@ public class Lecture3FactorialFor {
         int input_number=sc.nextInt();
         int counter=2;
         int factorial_up=1;
-        for (; counter<=input_number;){
-        factorial_up *=counter;
-        counter++;
+        while (counter<=input_number){
+            factorial_up *=counter;
+            counter++;
         }
         System.out.println("Факториал " + input_number + " = " + factorial_up);
     }

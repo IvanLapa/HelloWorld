@@ -1,6 +1,6 @@
 package com.company.lecture3;
 
-public class Lecture3FirstIntegers {
+public class FirstIntegers {
     public static void main (String[] args){
 int[] array;
 array = new int[100];

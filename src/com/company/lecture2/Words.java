@@ -2,7 +2,7 @@ package com.company.lecture2;
 
 import java.util.Scanner;
 
-public class Lecture2words {
+public class Words {
     public static void main(String[] args) {
         System.out.println("Введите два слова:");
         Scanner sc1 = new Scanner(System.in);
