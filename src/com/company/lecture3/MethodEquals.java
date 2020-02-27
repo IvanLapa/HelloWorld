@@ -10,5 +10,5 @@ public class MethodEquals {
             if (array1[i][j] == array2[i][j]){
                 answer = true;
             }
-    }
 }
+)
