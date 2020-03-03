@@ -2,7 +2,7 @@ package com.company.lecture3;
 
 import java.util.Random;
 
-public class GenerateArray {
+public class GenerateArray3_3 {
     public static void main(String[] args) {
         int j = 0; // генерация массива вещественных чисел
         double array[];

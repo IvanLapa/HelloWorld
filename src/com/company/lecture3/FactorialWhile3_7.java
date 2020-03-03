@@ -2,7 +2,7 @@ package com.company.lecture3;
 
 import java.util.Scanner;
 
-public class FactorialWhile {
+public class FactorialWhile3_7 {
     public static void main (String[] args){
         System.out.println("Введите число");
         Scanner sc;

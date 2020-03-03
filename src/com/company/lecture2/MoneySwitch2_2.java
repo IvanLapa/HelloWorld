@@ -2,7 +2,7 @@ package com.company.lecture2;
 
 import java.util.Scanner;
 
-public class MoneySwitch {
+public class MoneySwitch2_2 {
     public static void main (String[] args){
         System.out.println("Введите сумму денег в рублях:");
         Scanner sc = new Scanner(System.in);

@@ -3,7 +3,7 @@ package com.company.lecture3;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class FactorialFor {
+public class FactorialFor3_7 {
     public static void main (String[] args){
         System.out.println("Введите число");
         Scanner sc;

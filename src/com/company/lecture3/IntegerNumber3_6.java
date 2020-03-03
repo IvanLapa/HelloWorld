@@ -2,7 +2,7 @@ package com.company.lecture3;
 
 import java.util.Scanner;
 
-public class IntegerNumber {
+public class IntegerNumber3_6 {
     public static void main(String[] args) {
         System.out.println("Введите число больше 1:");
         Scanner sc = new Scanner(System.in);

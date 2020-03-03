@@ -2,7 +2,7 @@ package com.company.lecture2;
 
 import java.util.Scanner;
 
-public class Year {
+public class Year2_3 {
     public static void main (String[] args) {
         System.out.println("Введите год:");
         Scanner sc = new Scanner(System.in);
