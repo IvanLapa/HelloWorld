@@ -1,14 +1,12 @@
 package com.company.lecture7;
 
-public class Hero {
+public abstract class Hero {
     public String name;
-    public Hero (String a){
-        this.name=a;
+    public Hero(String a) {
+        this.name = a;
     }
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    public void attackEnemy(){
-        System.out.println("Герой атакует врага");
-    }
+    public abstract void attackEnemy (Enemy enemy);
 }

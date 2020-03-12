@@ -1,11 +1,12 @@
 package com.company.lecture7;
 
-public class Enemy {
+public class Enemy implements Mortal {
     public int health;
-    public Enemy(int a){
-        this.health=a;
+    public String name;
+    public  Enemy(String name, int health) {
+        this.name = name;
+        this.health = health;
     }
-
     public void setHealth(int health) {
         this.health = health;
     }
@@ -14,5 +15,8 @@ public class Enemy {
     }
     public int takeDamage(int damage){
        return this.health-damage;
+    }
+    public boolean isAlive (){
+        return this.health>0;
     }
 }
