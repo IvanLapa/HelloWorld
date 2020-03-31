@@ -10,5 +10,6 @@ public class Mission5 {
         Matcher matcher = pattern.matcher(input);
         while(matcher.find())
             System.out.println(matcher.group());
+                
     }
 }
