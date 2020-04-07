@@ -9,7 +9,7 @@ public class Mission3 {
             FileOutputStream fos = new FileOutputStream("for_lecture16_3_can_delete.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(noteBook1);
-            oos.close();
+            fos.close();
         } catch (IOException e){
             e.printStackTrace();
         }
@@ -17,7 +17,7 @@ public class Mission3 {
             FileInputStream fis = new FileInputStream("for_lecture16_3_can_delete.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
             NoteBook noteBookInput = (NoteBook) ois.readObject();
-            ois.close();
+            fis.close();
             System.out.println(noteBookInput);
         } catch (IOException e){
             e.printStackTrace();

@@ -14,7 +14,7 @@ public class Mission2 {
         oos.writeObject(computer1);
         oos.writeObject(computer2);
         oos.writeObject(computer3);
-        oos.close();
+        fos.close();
     } catch (IOException e){
         e.printStackTrace();
     }
@@ -25,7 +25,7 @@ public class Mission2 {
             Computer computer1input = (Computer) ois.readObject();
             Computer computer2input = (Computer) ois.readObject();
             Computer computer3input = (Computer) ois.readObject();
-            ois.close();
+            fis.close();
         System.out.println(computer1input);
         System.out.println(computer2input);
         System.out.println(computer3input);
