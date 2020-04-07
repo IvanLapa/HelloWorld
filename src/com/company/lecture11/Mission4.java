@@ -9,7 +9,7 @@ public class Mission4 {
         black_box.addNumber(3);
         black_box.addNumber(-2);
         black_box.addNumber(9);
-        System.out.println(black_box.return_k_min(5));
+        System.out.println(black_box.return_k_min(3));
         System.out.println(black_box.return_n_max(2));
     }
 }
