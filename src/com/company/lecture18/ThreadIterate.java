@@ -1,8 +1,9 @@
 package com.company.lecture18;
 
 public class ThreadIterate extends Thread{
+
     public static long iterate_sum;
-    public void iterate (){
+    public void run (){
         for (int i=1; i<10000000; i++){
             if((i%2==0)&&(i%3==0)){
                 iterate_sum+=i;
@@ -15,8 +16,6 @@ public class ThreadIterate extends Thread{
             }
         }
     }
-    public static long returnIterateSum(){
-        return iterate_sum;
-    }
 }
+
 

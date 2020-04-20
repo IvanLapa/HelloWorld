@@ -1,9 +1,10 @@
 package com.company.lecture18;
 
+
 import static com.company.lecture18.ThreadIterate.iterate_sum;
 
 public class ThreadDemon extends Thread {
-    public void demon() {
+    public void run() {
         for (;;) {
             System.out.println(iterate_sum);
             try {
@@ -11,7 +12,6 @@ public class ThreadDemon extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
     }
 }
