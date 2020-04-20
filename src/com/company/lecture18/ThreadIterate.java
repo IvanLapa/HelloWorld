@@ -1,7 +1,6 @@
 package com.company.lecture18;
 
 public class ThreadIterate extends Thread{
-    public static boolean isAlive = ThreadIterate.isAlive;;
     public static long iterate_sum;
     public void iterate (){
         for (int i=1; i<10000000; i++){
