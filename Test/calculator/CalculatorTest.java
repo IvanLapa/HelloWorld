@@ -1,6 +1,6 @@
 package calculator;
 
-import com.company.lecture30JUnit.Calculator;
+import com.companyJD1.lecture30JUnit.Calculator;
 import org.junit.Assert;
 import org.junit.Test;
 
