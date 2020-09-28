@@ -2,6 +2,10 @@ package com.companyJD1.lecture2;
 
 import java.util.Scanner;
 
+//  Имеется целое число, вводимое пользователем с консоли. Это число - сумма денег в рублях.
+//  Вывести это число, добавив к нему слово "рубль" в правильном падеже ("рубль", "рублей", "рубля").
+//  Модифицировать в switch в отдельном файле.
+
 public class MoneySwitch2_2 {
     public static void main (String[] args){
         System.out.println("Введите сумму денег в рублях:");

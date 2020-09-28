@@ -4,6 +4,10 @@ import com.companyJD1.lecture3.FactorialFor3_7;
 
 import java.util.Scanner;
 
+//  Имеется целое число, вводимое пользователем с консоли. Это число - сумма денег в рублях.
+//  Вывести это число, добавив к нему слово "рубль" в правильном падеже ("рубль", "рублей", "рубля").
+//  Использовать конструкцию if-else.
+
 public class Money2_2 extends FactorialFor3_7 {
     public static void main(String[] args) {
         System.out.println("Введите сумму денег в рублях:");

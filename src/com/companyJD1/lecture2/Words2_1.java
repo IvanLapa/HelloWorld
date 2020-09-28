@@ -2,6 +2,11 @@ package com.companyJD1.lecture2;
 
 import java.util.Scanner;
 
+//Запросить у пользователя 2 слова. Если они одинаковы - вывести "Отлично! Слова одинаковы".
+//Если они отличаются лишь регистром - "Хорошо. Почти одинаковы"
+//Если они отличаются, но одной длины - "Ну, хотя бы они одной длины"
+//Использовать методы класса String: equals(String string), equalsIgnoreCase(String string), length()
+
 public class Words2_1 {
     public static void main(String[] args) {
         System.out.println("Введите два слова:");
