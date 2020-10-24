@@ -2,7 +2,13 @@ package com.companyJD1.lecture3_loops;
 
 import java.util.Random;
 
-public class GenerateArray3_3 {
+/**Сгенерировать массив вещественных чисел из 1000 элементов
+ * (для генерации использовать Random random = new Random();
+ * random.nextDouble()). Отсортировать массив, найти среднее значение,
+ * максимальное и минимальное.
+ */
+
+public class GenerateArrayOfNaturalNumbers {
     public static void main(String[] args) {
         int j = 0; // генерация массива вещественных чисел
         double array[];

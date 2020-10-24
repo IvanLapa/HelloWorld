@@ -2,7 +2,10 @@ package com.companyJD1.lecture3_loops;
 
 import java.util.Scanner;
 
-public class FactorialFor3_7 {
+/**Написать алгоритм расчета факториала, используя циклы (for и while).
+ */
+
+public class FactorialFor {
     public static void main (String[] args){
         System.out.println("Введите число");
         Scanner sc;

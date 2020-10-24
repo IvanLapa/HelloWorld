@@ -2,12 +2,12 @@ package com.companyJD1.lecture2_operators;
 
 import java.util.Scanner;
 
-//Запросить у пользователя 2 слова. Если они одинаковы - вывести "Отлично! Слова одинаковы".
-//Если они отличаются лишь регистром - "Хорошо. Почти одинаковы"
-//Если они отличаются, но одной длины - "Ну, хотя бы они одной длины"
-//Использовать методы класса String: equals(String string), equalsIgnoreCase(String string), length()
-
-public class Words2_1 {
+/**Запросить у пользователя 2 слова. Если они одинаковы - вывести "Отлично! Слова одинаковы".
+ * Если они отличаются лишь регистром - "Хорошо. Почти одинаковы"
+ * Если они отличаются, но одной длины - "Ну, хотя бы они одной длины"
+ * Использовать методы класса String: equals(String string), equalsIgnoreCase(String string), length()
+ */
+public class ComparisonOfWords {
     public static void main(String[] args) {
         System.out.println("Введите два слова:");
         Scanner sc1 = new Scanner(System.in);
