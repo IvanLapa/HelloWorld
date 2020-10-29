@@ -1,19 +1,39 @@
 package com.companyJD1.lecture13_strings;
 
+import java.time.Duration;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+
+/**Написать два цикла, выполняющих многократное сложение строк,
+ * один с помощью оператора сложения и String,
+ * второй с помощью StringBuilder и метода append.
+ * Сравнить скорость их выполнения.
+ */
+
 public class Mission1 {
     public static void main(String[] args) {
-    String first_string = "Java";
-    String second_string = "is the best";
-    String third_string = "from my discovery";
-// сложения обьектов класса String
-        long start =System.nanoTime();
-        String all1 = first_string.concat(second_string.concat(third_string));
-        long finish =System.nanoTime();
-        System.out.println(finish-start);
-// сложения обьектов класса String
-    String all12 = first_string+second_string+third_string;
-// StringBuilder и метода append
-    StringBuilder string = new StringBuilder(first_string);
-    string.append(second_string).append(third_string);
+        String str_1 = " ";
+        long start = new Date().getTime();
+        LocalTime t1 = LocalTime.now();
+        for (int i = 0; i < 100000; i++) {
+            str_1 += i;
+        }
+        LocalTime t2 = LocalTime.now();
+        Duration between = Duration.between(t2, t1);
+        long l_1 = between.get(ChronoUnit.NANOS);
+        System.out.println(l_1);
+
+        StringBuilder str_2 = new StringBuilder(" ");
+        long start_2 = new Date().getTime();
+        LocalTime t3 = LocalTime.now();
+        for (int i = 0; i < 100000; i++) {
+            str_2.append(i);
+        }
+        LocalTime t4 = LocalTime.now();
+        Duration between_2 = Duration.between(t4, t3);
+        long l_2 = between.get(ChronoUnit.NANOS);
+        System.out.println(l_2);
+        System.out.println(l_2 - l_1);
     }
 }

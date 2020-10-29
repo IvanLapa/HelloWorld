@@ -1,16 +1,26 @@
 package com.companyJD1.lecture13_strings;
 
+import java.util.Scanner;
+
+/**Написать функцию, принимающую в качестве параметров имя,
+ * фамилию и отчество и возвращающую инициалы в формате "Ф.И.О".
+ * Учесть, что входные параметры могут быть в любом регистре,
+ * а результирующая строка должна быть в верхнем.
+ */
+
 public class Mission4 {
     public static void main(String[] args) {
-        String first_name = "Ivan";
-        String middle_mane = "Mihailovicn";
-        String last_name = "Laptenok";
-
-        String f_name = first_name.substring(0, 1);
-        String m_mane = middle_mane.substring(0, 1);
-        String l_mane = last_name.substring(0, 1);
-        String full_name = l_mane + "." + f_name + "." + m_mane + ".";
-        System.out.println(full_name.toUpperCase());
+        Scanner scan=new Scanner(System.in);
+        String firstName=scan.next(); // имя
+        String lastName=scan.next();  // фамилия
+        String middleName=scan.next(); // отчество
+        System.out.println(Initials(firstName,lastName,middleName));
+    }
+    private static String Initials(String firstName,String lastName,String middleName){
+        char a=Character.toUpperCase(lastName.charAt(0));
+        char b=Character.toUpperCase(firstName.charAt(0));
+        char c=Character.toUpperCase(middleName.charAt(0));
+        return a+"."+b+"."+c+".";
         }
     }
 
