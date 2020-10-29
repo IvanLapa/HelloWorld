@@ -2,6 +2,10 @@ package com.companyJD1.lecture16_serialization;
 
 import java.io.*;
 
+/**Сравнить скорость чтения и записи 5 МБ символов при использовании классов
+ * буфиризированого и не буфиризированого символьного ввода вывода.
+ */
+
 public class Mission1 {
     public static void main(String[] args)throws IOException {
         long start1 = System.currentTimeMillis();
