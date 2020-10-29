@@ -1,6 +1,10 @@
 package com.companyJD1.lecture5_wrappers;
 import java.math.BigDecimal;
 
+/**Определить класс, который при инициализации принимает на вход 2 аргумента целого или вещественного типа.
+ * Задать перегруженные методы возвращающие результат арифметических операций над заданными полями и полями типа BigDecimal.
+ */
+
 public class MyBigDecimal {
     int first_arg;
     int second_arg;
