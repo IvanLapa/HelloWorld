@@ -2,6 +2,10 @@ package com.companyJD1.lecture16_serialization;
 
 import java.io.*;
 
+/**Создать класс Computer. Добавить ему несколько полей,
+ * создать объект этого класса, сериализовать в файл.
+ * Десериализовать объект из того же файла, вывести значения полей в консоль.
+ */
 public class Mission2 {
     public static void main(String[] args) {
     Computer computer1 = new Computer(1,"Apple");
@@ -9,7 +13,7 @@ public class Mission2 {
     Computer computer3 = new Computer (3, "AOC");
 
     try {
-        FileOutputStream fos = new FileOutputStream("for_lecture16_2_can_delete.bin");
+        FileOutputStream fos = new FileOutputStream("C:\\Users\\Иван\\IdeaProjects\\HelloWorld\\src\\com\\companyJD1\\lecture16_serialization\\resources\\for_lecture16_2.txt");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(computer1);
         oos.writeObject(computer2);
@@ -19,7 +23,7 @@ public class Mission2 {
         e.printStackTrace();
     }
     try {
-            FileInputStream fis = new FileInputStream("for_lecture16_2_can_delete.bin");
+            FileInputStream fis = new FileInputStream("C:\\Users\\Иван\\IdeaProjects\\HelloWorld\\src\\com\\companyJD1\\lecture16_serialization\\resources\\for_lecture16_2.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
 
             Computer computer1input = (Computer) ois.readObject();
@@ -45,13 +49,8 @@ class Computer implements Serializable{
         this.id = id;
         this.model = model;
     }
-    public int getId (){
-        return id;
-    }
-    public String getModel (){
-        return model;
-    }
-    public String toString(){
-        return id+" : "+model;
+    @Override
+    public String toString() {
+        return "ID: " + this.id + ". model: " + this.model + ".";
     }
 }

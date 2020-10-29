@@ -10,8 +10,8 @@ public class Mission1 {
     public static void main(String[] args)throws IOException {
         long start1 = System.currentTimeMillis();
         int char1 = 0;
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("for_lecture16_can_delete")));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("for_lecture16_can_delete")));
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\Иван\\IdeaProjects\\HelloWorld\\src\\com\\companyJD1\\lecture16_serialization\\resources\\for_lecture16.txt")));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:\\Users\\Иван\\IdeaProjects\\HelloWorld\\src\\com\\companyJD1\\lecture16_serialization\\resources\\for_lecture16.txt")));
         while ((char1 = br.read()) != -1) {
             bw.write((char) char1);
         }
@@ -21,8 +21,8 @@ public class Mission1 {
         System.out.println("Buffered: " + (finish1 - start1) + " ms");
         long start2 = System.currentTimeMillis();
         int char2 = 0;
-        Reader br2 = new FileReader("for_lecture16_can_delete");
-        Writer bw2 = new FileWriter("for_lecture16_can_delete");
+        Reader br2 = new FileReader("C:\\Users\\Иван\\IdeaProjects\\HelloWorld\\src\\com\\companyJD1\\lecture16_serialization\\resources\\for_lecture16.txt");
+        Writer bw2 = new FileWriter("C:\\Users\\Иван\\IdeaProjects\\HelloWorld\\src\\com\\companyJD1\\lecture16_serialization\\resources\\for_lecture16.txt");
         while ((char2 = br2.read()) != -1) {
             bw2.write((char) char2);
         }
