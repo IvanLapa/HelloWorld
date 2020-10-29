@@ -1,13 +1,27 @@
 package com.companyJD1.lecture7_oop;
 
 public class Mage extends Hero{
-    public Mage (String a){
-        super(a);
+    public Mage(String name, int health) {
+        super(name, health);
     }
+
     @Override
-    public void attackEnemy(Enemy enemy) {
-        int damage=20;
-        enemy.takeDamage(damage);
+    protected void attackEnemy(Enemy e) {
+        do {
+            int damage = rand.nextInt(200);
+            e.takeDamage(damage);
+            System.out.println(this.getName() + "-маг атаковал врага.Нанесённый урон:" + damage + ".Осталось здоровья у " + e.getName() + ":" + e.getHealth());
+            this.takeDamage(e.attackHero(this));
+            if (!e.isAlive()) {
+                System.out.println("Победил герой : " + this.getName());
+                break;
+            }
+            System.out.println(e.getName() + "-враг атаковал " + this.getName() + ".Нанесённый урон:" + e.attackHero(this) + ".Осталось здоровья у " + this.getName() + ":" + this.getHealth());
+            if (!this.isAlive()) {
+                System.out.println("Победил враг : " + e.getName());
+                break;
+            }
+        } while (e.getHealth() >= 0 && this.getHealth() >= 0);
     }
 }
 
