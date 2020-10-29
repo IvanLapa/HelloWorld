@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
+/**Вывести учеников из списка в обратном порядке.
+ * (2 варианта решения).
+ */
 public class Mission3 {
     public static void main(String[] args) {
         List<Students> students_list = new ArrayList<>();

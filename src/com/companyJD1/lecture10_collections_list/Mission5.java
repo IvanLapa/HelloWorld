@@ -1,7 +1,10 @@
 package com.companyJD1.lecture10_collections_list;
+
 import java.util.*;
 
-
+/**Определить множество на основе множества целых чисел.
+ * Создать методы для определения пересечения и объединения множеств.
+ */
 public class Mission5 {
     public static void main(String[] args) {
         Set<Integer> set_1 = new HashSet<>();

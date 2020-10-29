@@ -1,6 +1,14 @@
 package com.companyJD1.lecture10_collections_list;
+
 import java.util.ArrayList;
 import java.util.Scanner;
+
+/**Ввести с консоли число, занести его цифры в стек.
+ * Стек – самостоятельно спроектированный класс, поддерживающий 3 операции:
+ * Задать размер стека.
+ * Внести цифру в стек.
+ * Извлечь цифру из стека.
+ */
 
 public class Mission4 {
     public static void main(String[] args) {

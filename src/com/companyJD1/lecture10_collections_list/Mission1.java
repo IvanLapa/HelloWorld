@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Random;
 
+/** Задание. Создать список оценок учеников с помощью ListIterator,
+ * заполнить случайными оценками. Удалить неудовлетворительные оценки из списка.
+ */
 public class Mission1 {
     public static void main(String[] args) {
         List<Integer> list = new LinkedList<>();
