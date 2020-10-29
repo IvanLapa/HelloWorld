@@ -7,7 +7,6 @@ import java.util.Scanner;
  * Если они отличаются, но одной длины - "Ну, хотя бы они одной длины"
  * Использовать методы класса String: equals(String string), equalsIgnoreCase(String string), length()
  */
-
 public class ComparisonOfWords {
     public static void main(String[] args) {
         System.out.println("Введите два слова:");
