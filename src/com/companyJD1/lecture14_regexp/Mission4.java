@@ -1,18 +1,36 @@
 package com.companyJD1.lecture14_regexp;
+
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+/**Написать программу, выполняющую поиск в строке мобильных телефонных номеров в формате +375XXYYYYYYY
+ * и заменяющую каждый телефон на тот же, но в формате +375 (XX) YYY-YY-YY
+ * X - код оператора
+ * Y - номер телефона
+ */
+
 public class Mission4 {
     public static void main(String[] args) {
-        //блок который находит теелфоны согаслно тех заданию
-        String input = "+375256480418 80293161514 +375448141253";
-        Pattern pattern = Pattern.compile("\\+\\d{12}");
-        Matcher matcher = pattern.matcher(input);
-        while (matcher.find())
-            System.out.println(matcher.group());
-        // блок который рвет телефон на нужные группы
-        String tel = "+375256480418";
-        String tel2 = tel.replaceAll("(\\+375)(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 ($2) $3-$4-$5");
-        System.out.println(tel2);
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
+        String output = "";
+        Pattern pattern = Pattern.compile("(\\+375)(\\d{2})(\\d{3})(\\d{2})(\\d{2})");
+        Matcher matcher = pattern.matcher(str);
+        StringBuilder stringBuilder = new StringBuilder();
+        while (matcher.find()) {
+            stringBuilder
+                    .append(" ")
+                    .append(matcher.group(1))
+                    .append("(")
+                    .append(matcher.group(2))
+                    .append(")")
+                    .append(matcher.group(3))
+                    .append("-")
+                    .append(matcher.group(4))
+                    .append("-")
+                    .append(matcher.group(5));
+        }
+        System.out.println(output = stringBuilder.toString());
     }
 }
-// какми методом сявзать всю эту историю не знаю
