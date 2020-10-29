@@ -1,5 +1,13 @@
 package com.companyJD1.lecture11_collection_set_map;
+
 import java.util.*;
+
+ /**Сложить два многочлена заданной степени, если коэффициенты многочленов
+  * хранятся в двух объектах HashMap в виде:
+  * Ключ: номер степени;
+  * Значение: значение множителя.
+  * Вывести результирующий многочлен в виде строки: ax^6 + bx^4 + cx^3 + dx + 8
+  */
 
 public class Mission3 {
     public static void main(String[] args) {

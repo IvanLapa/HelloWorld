@@ -1,6 +1,10 @@
 package com.companyJD1.lecture11_collection_set_map;
+
 import java.util.*;
 
+/**Написать метод isUnique, который принимает Map<String, String> и возвращает true,
+ * если два различных ключа не соответствуют двум одинаковым значениям.
+ */
 
 public class Mission2 {
     public static void main(String[] args) {

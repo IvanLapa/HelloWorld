@@ -1,5 +1,12 @@
 package com.companyJD1.lecture11_collection_set_map;
+
 import java.util.*;
+
+/**Реализовать структуру «Черный ящик» хранящую целые числа.
+ * Структура должна поддерживать операции добавления числа и
+ * возвращение К-го по минимальности числа и N-ного по максимальности
+ * элемента из ящика
+ */
 
 public class Mission4 {
     public static void main(String[] args) {
