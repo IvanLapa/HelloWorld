@@ -1,13 +1,16 @@
 package com.companyJD1.lecture12_exceptions;
 
+/**Написать код, который создаст, а затем отловит ArrayIndexOutOfBoundsException.
+ */
+
 public class Mission2 {
     public static void main(String[] args) {
-        int[] mission = new int[3];
-        try{
-            mission[4]=45;
+        int[] arr = new int[2];
+        try {
+            arr[2] = 1;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            arr[arr.length - 1] = 1;
         }
-        catch(ArrayIndexOutOfBoundsException ex){
-            System.out.println("Выход за пределы массива");
-        }
+        System.out.println(arr[arr.length - 1]);
     }
 }

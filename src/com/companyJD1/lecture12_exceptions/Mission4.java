@@ -1,5 +1,9 @@
 package com.companyJD1.lecture12_exceptions;
 
+/**Повторить предыдущее упражнение, но наследуя свой класс от класса RuntimeException.
+ * Добавить вконструктор своего класса возможность указания сообщения.
+ */
+
 public class Mission4 {
     public static void main(String[] args) {
         try {

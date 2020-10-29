@@ -1,13 +1,18 @@
 package com.companyJD1.lecture12_exceptions;
 
+/**Объявите переменную со значением null.
+ * Вызовите метод у этой переменной.
+ * Отловите возникшее исключение.
+ */
+
 public class Mission1 {
     public static void main(String[] args) {
+        String s = null;
         try {
-            String mission1=null;
-            char x = mission1.charAt(2);
+            s.length();
+        } catch (NullPointerException e) {
+            s = "qwe";
         }
-catch (Exception ex){
-            System.out.println("введите значени");
-        }
+        System.out.println(s);
     }
 }
