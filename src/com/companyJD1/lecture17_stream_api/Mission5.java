@@ -2,6 +2,11 @@ package com.companyJD1.lecture17_stream_api;
 
 import java.util.*;
 
+/**Дан класс Person с полями firstName, lastName, age.
+ * Вывести полное имя самого старшего человека,
+ * у которого длина этого имени не превышает 15 символов.
+ */
+
 public class Mission5 {
     public static void main(String[] args) {
         Person person1 = new Person("Ivan", "Java", 30);
@@ -12,10 +17,12 @@ public class Mission5 {
         list.add(person1);
         list.add(person2);
         list.add(person3);
+        
         String res = list.stream()
                 .filter(Objects::nonNull)
                 .filter(person -> person.first_name!=null && person.last_name!=null && (person.first_name.length() + person.last_name.length())<15)
                 .max (Comparator.comparingInt(a -> a.age)).map(person -> person.first_name + " " + person.last_name).orElse("");
+
         System.out.println(res);
     }
 }
