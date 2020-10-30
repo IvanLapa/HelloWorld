@@ -1,4 +1,4 @@
-package com.companyJD1.lecture19_thread_synchronizations;
+package com.companyJD1.lecture20_thread_executer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**Задан массив случайных целых чисел (от 1 до 300) случайной длины (1 млн элементов).
+ * Найти максимальный элемент в массиве двумя способами: в одном потоке и используя 10 потоков.
+ * Сравнить затраченное в обоих случаях время.
+ */
 
 public class Mission2 extends Thread{
     static int[] random_numbers = new int[1000000];
@@ -21,9 +25,11 @@ public class Mission2 extends Thread{
         for (int i = 0; i < random_numbers.length; i++) {
             random_numbers[i] = (int) (Math.random()*300);
         }
+
         ExecutorService executor_service = Executors.newSingleThreadExecutor();
         AtomicLong start = new AtomicLong();
         AtomicLong finish = new AtomicLong();
+
         executor_service.submit(() -> {
             int max_number = 0;
             start.set(System.nanoTime());
@@ -35,6 +41,7 @@ public class Mission2 extends Thread{
             finish.set(System.nanoTime());
             System.out.println("one thread: " + (finish.get() - start.get()));
         });
+
         executor_service.shutdown();
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         AtomicLong start2 = new AtomicLong(System.nanoTime());
@@ -70,7 +77,9 @@ public class Mission2 extends Thread{
         list.add(nine);
         list.add(ten);
         executorService.shutdown();
+
         int max = 0;
+
         if(executorService.isShutdown()) {
             for (Mission2 exercise2 : list) {
                 if (exercise2.getMaxNumber() > max) {
@@ -78,6 +87,7 @@ public class Mission2 extends Thread{
                 }
             }
         }
+
         AtomicLong finish2 = new AtomicLong(System.nanoTime());
         System.out.println("ten threads: " + (finish2.get()-start2.get()));
     }
