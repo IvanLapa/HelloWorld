@@ -32,7 +32,6 @@ public class Dump {
         mapToGet_Dump.put(9, PartOfRobot.HDD);
     }
 
-
     public synchronized void getDumpDetails(int nightNumber, Scientist scientist) {
         while (!available) {
             try {
@@ -46,15 +45,12 @@ public class Dump {
         int ServantGetDetails = random.nextInt(4) + 1;
         System.out.println("[Servant get [" + ServantGetDetails + "] details night number " + nightNumber + " ]");
 
-
         for (int i = 0; i < ServantGetDetails; i++) {
             int key = random.nextInt(9) + 1;
             if (map_Dump.get(mapToGet_Dump.get(key)) != 0) {
                 scientist.addScientistDetails(mapToGet_Dump.get(key));
             } else i--;
-
         }
-
 
         available = false;
         notifyAll();
@@ -77,14 +73,12 @@ public class Dump {
 
             for (int i = 0; i < 20; i++) {
                 map_Dump.put(map_Factory.get(random.nextInt(9) + 1), map_Dump.get(map_Factory.get(random.nextInt(9) + 1)) + 1);
-
             }
         } else {
             System.out.println("[Factory throw [" + rand + "] details,night number " + nightNumber + " ]");
 
             for (int i = 0; i < rand; i++) {
                 map_Dump.put(map_Factory.get(random.nextInt(9) + 1), map_Dump.get(map_Factory.get(random.nextInt(9) + 1)) + 1);
-
             }
         }
 

@@ -1,17 +1,25 @@
 package com.companyJD1.lecture18_tread;
 
 
-import static com.companyJD1.lecture18_tread.ThreadIterate.iterate_sum;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class ThreadDemon extends Thread {
+    private AtomicLong sum;
+
+    public ThreadDemon(AtomicLong sum) {
+        this.sum = sum;
+        setDaemon(true);
+        start();
+    }
+
     public void run() {
-        for (;;) {
-            System.out.println(iterate_sum);
-            try {
-                Thread.sleep(5);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        try {
+            while (true) {
+                Thread.sleep(11);
+                System.out.println("[DaemonThread] sum:" + sum.get());
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

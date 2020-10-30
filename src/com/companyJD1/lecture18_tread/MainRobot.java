@@ -1,6 +1,6 @@
 package com.companyJD1.lecture18_tread;
 
-public class Mission2 {
+public class MainRobot {
     public static void main(String[] args) throws InterruptedException {
 
         Dump dump=new Dump();

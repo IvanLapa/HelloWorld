@@ -16,15 +16,18 @@ public class Factory extends Thread{
         map_Factory.put(7, PartOfRobot.CPU);
         map_Factory.put(8, PartOfRobot.RAM);
         map_Factory.put(9, PartOfRobot.HDD);
+
         this.dump = dump;
     }
+
     @Override
     public void run() {
-        for (int i = 0; i < 50; i++){
+        for (int i = 0; i < 50; i++) {
             generation_part(i, dump);
         }
     }
-    public void generation_part (int numberOfNight, Dump dump){
+
+    public void generation_part (int numberOfNight, Dump dump) {
         numberOfNight++;
         dump.putDumpDetails(map_Factory, numberOfNight);
         try {

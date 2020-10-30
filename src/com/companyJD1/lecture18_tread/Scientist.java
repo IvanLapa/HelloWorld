@@ -16,6 +16,7 @@ public class Scientist extends Thread {
         map_ScientistDetails.put(PartOfRobot.CPU, 0);
         map_ScientistDetails.put(PartOfRobot.RAM, 0);
         map_ScientistDetails.put(PartOfRobot.HDD, 0);
+
         this.dump = dump;
     }
 
@@ -30,7 +31,11 @@ public class Scientist extends Thread {
     @Override
     public void run() {
         for (int i = 0; i < 50; i++) dump.getDumpDetails(i, this);
-        System.out.println("Scientist details: " + getMap_ScientistDetails() + "\n" + "We have " + countOfRobots() + " robots");
+        System.out.println("Scientist details: "
+                + getMap_ScientistDetails()
+                + "\n" + "We have "
+                + countOfRobots()
+                + " robots");
     }
 
     private int countOfRobots() {
