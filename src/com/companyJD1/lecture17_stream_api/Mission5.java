@@ -17,7 +17,7 @@ public class Mission5 {
         list.add(person1);
         list.add(person2);
         list.add(person3);
-        
+
         String res = list.stream()
                 .filter(Objects::nonNull)
                 .filter(person -> person.first_name!=null && person.last_name!=null && (person.first_name.length() + person.last_name.length())<15)
